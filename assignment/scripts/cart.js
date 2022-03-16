@@ -25,9 +25,10 @@ function addItem(item) {
   return check;
 }
 
-console.log(addItem('orange'));
-console.log(addItem('apple'));
-console.log(addItem('toyota tacoma'));
+console.log(`Basket is ${basket}`);
+console.log('Adding orange (expect true)', addItem('orange'));
+console.log('Adding apple (expect true)', addItem('apple'));
+console.log('Adding toyota tacoma (expect true)', addItem('toyota tacoma'));
 
 console.log(basket); // DONE
 
@@ -35,11 +36,14 @@ console.log(basket); // DONE
 //   - loop over the items in the `basket` array
 //   - console.log each individual item on a new line
 
-function listItems() {
-  for (let i = 0; i < basket.length; i++) {
-    console.log(basket[i]);
+function listItems(array) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] > 0);
   }
+  return;
 }
+
+console.log(listItems());
 
 // - Create a function called `empty`. It should:
 //   - reset the `basket` to an empty array
