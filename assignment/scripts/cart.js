@@ -54,12 +54,20 @@ console.log(
 );
 // This is a test to check if other elements will be logged in the console:
 console.log(
-  'Should NOT list item of banana in basket,',
+  'TEST - Should NOT list item of banana in basket,',
   listItems('banana', basket)
 ); // DONE
 
 // - Create a function called `empty`. It should:
 //   - reset the `basket` to an empty array
+
+function empty() {
+  basket = [];
+}
+// KEEP WORKING ON THIS FUNCTION!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+console.log(empty());
+
+console.log(basket);
 
 // > __IMPORTANT__
 // > Make sure that you are writing code *in the file* to test every function that you write!
