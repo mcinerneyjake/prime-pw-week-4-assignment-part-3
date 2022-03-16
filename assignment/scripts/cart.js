@@ -64,13 +64,10 @@ console.log(
 function empty() {
   basket = [];
 }
-// KEEP WORKING ON THIS FUNCTION!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 console.log(empty());
 
-console.log(basket);
-
-// > __IMPORTANT__
-// > Make sure that you are writing code *in the file* to test every function that you write!
+console.log(basket); // DONE
 
 // For example, to test `addItem`:
 // ```
