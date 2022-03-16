@@ -29,21 +29,34 @@ console.log(`Basket is ${basket}`);
 console.log('Adding orange (expect true)', addItem('orange'));
 console.log('Adding apple (expect true)', addItem('apple'));
 console.log('Adding toyota tacoma (expect true)', addItem('toyota tacoma'));
-
-console.log(basket); // DONE
+console.log(`Basket is now ${basket}`); // DONE
 
 // - Create a function called `listItems`. It should:
 //   - loop over the items in the `basket` array
 //   - console.log each individual item on a new line
 
-function listItems(array) {
+function listItems(item, array) {
   for (let i = 0; i < array.length; i++) {
-    if (array[i] > 0);
+    if (item === array[i]) {
+      return item;
+    }
   }
-  return;
 }
 
-console.log(listItems());
+console.log(
+  'Should list item of orange in basket,',
+  listItems('orange', basket)
+);
+console.log('Should list item of apple in basket,', listItems('apple', basket));
+console.log(
+  'Should list item of toyota tacoma in basket,',
+  listItems('toyota tacoma', basket)
+);
+// This is a test to check if other elements will be logged in the console:
+console.log(
+  'Should NOT list item of banana in basket,',
+  listItems('banana', basket)
+); // DONE
 
 // - Create a function called `empty`. It should:
 //   - reset the `basket` to an empty array
