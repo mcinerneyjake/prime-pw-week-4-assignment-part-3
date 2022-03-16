@@ -9,16 +9,37 @@ console.log('***** Cart Functions *****');
 // ### Required Features
 // Update the `cart.js` file to do the following:
 
-// - Create a global variable named `basket` and set it to an empty array. // DONE
-let basket = [];
+// - Create a global variable named `basket` and set it to an empty array.
+
+let basket = []; // DONE
+
 // - Create a function called `addItem`. It should:
 //   - take an input parameter for a string `item`
 //   - add the new item to the global array `basket`.
 //   - return `true` indicating the item was added
-function addItem(item) {}
+
+function addItem(item) {
+  let check = false;
+  basket.push(item);
+  check = true;
+  return check;
+}
+
+console.log(addItem('orange'));
+console.log(addItem('apple'));
+console.log(addItem('toyota tacoma'));
+
+console.log(basket); // DONE
+
 // - Create a function called `listItems`. It should:
 //   - loop over the items in the `basket` array
 //   - console.log each individual item on a new line
+
+function listItems() {
+  for (let i = 0; i < basket.length; i++) {
+    console.log(basket[i]);
+  }
+}
 
 // - Create a function called `empty`. It should:
 //   - reset the `basket` to an empty array
