@@ -76,7 +76,7 @@ console.log('basket should be assigned to an empty array:', basket); // DONE
 
 // 1. Add a global `const` named `maxItems` and set it to 5.
 
-const maxItems = 5;
+const maxItems = 5; // DONE
 
 addItem('donut');
 addItem('coffee');
@@ -97,12 +97,26 @@ function isFull() {
   return true;
 }
 
-console.log(isFull());
+console.log(isFull()); // DONE
 
 // 3. Update the required `addItem` function to:
 //   - Use the `isFull` function to prevent more than `maxItems` from being added to the basket.
 //   - If an item was added to the array, return `true`
 //   - If there was no room and the item could not be added return `false`
+
+function addItemMaxLimit(item) {
+  let check = false;
+  if (isFull() === false) {
+    basket.push(item);
+    check = true;
+  }
+  return check;
+}
+
+console.log(addItemMaxLimit('granny smith'));
+console.log(addItemMaxLimit('granny blacksmith'));
+console.log(addItemMaxLimit('granny goldsmith'));
+console.log(basket); // DONE
 
 // __Using Array built-in functions!__
 
