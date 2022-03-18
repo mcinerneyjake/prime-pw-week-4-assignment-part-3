@@ -25,7 +25,7 @@ function addItem(item) {
   return check;
 }
 
-console.log(`Basket is ${basket}`);
+console.log(`Basket is an empty array: ${basket}`);
 console.log('Adding orange (expect true)', addItem('orange'));
 console.log('Adding apple (expect true)', addItem('apple'));
 console.log('Adding toyota tacoma (expect true)', addItem('toyota tacoma'));
@@ -65,16 +65,9 @@ function empty() {
   basket = [];
 }
 
-console.log(empty());
+empty();
 
-console.log(basket); // DONE
-
-// For example, to test `addItem`:
-// ```
-// console.log(`Basket is ${basket}`);
-// console.log('Adding apples (expect true)', addItem('apples'));
-// console.log(`Basket is now ${basket}`);
-// ```
+console.log('basket should be assigned to an empty array:', basket); // DONE
 
 // ### Stretch Goals
 // Remember that Stretch Goals are not required, but will help you to further develop concepts from the skills we have covered.
@@ -83,9 +76,28 @@ console.log(basket); // DONE
 
 // 1. Add a global `const` named `maxItems` and set it to 5.
 
+const maxItems = 5;
+
+addItem('donut');
+addItem('coffee');
+addItem('Al Green vinyl');
+addItem('headphones');
+addItem('bacon');
+
+console.log(basket);
+
 // 2. Create a function called isFull(). It should:
 //   - return `false` if the basket contains *less* than max number of items
 //   - return `true` otherwise (equal or more than maxItems)
+
+function isFull() {
+  if (basket.length < maxItems) {
+    return false;
+  }
+  return true;
+}
+
+console.log(isFull());
 
 // 3. Update the required `addItem` function to:
 //   - Use the `isFull` function to prevent more than `maxItems` from being added to the basket.
