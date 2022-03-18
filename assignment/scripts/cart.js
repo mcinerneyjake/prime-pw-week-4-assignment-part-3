@@ -116,6 +116,8 @@ function addItemMaxLimit(item) {
 console.log(addItemMaxLimit('granny smith'));
 console.log(addItemMaxLimit('granny blacksmith'));
 console.log(addItemMaxLimit('granny goldsmith'));
+console.log(addItemMaxLimit('granny silversmith'));
+console.log(addItemMaxLimit('granny mr-and-mrs-smith'));
 console.log(basket); // DONE
 
 // __Using Array built-in functions!__
@@ -125,3 +127,20 @@ console.log(basket); // DONE
 //   - Use [Array.indexOf](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) to find the index of the first matching item in the basket.
 //   - Use [Array.splice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) to remove the first matching item from the basket.
 //   - Return the item removed or `null` if the item was not found
+
+function removeItem(item, array) {
+  // remove matching item from basket
+  // make a LOOP to interate through indices
+  for (let i = 0; i < array.length; i++) {
+    // find specific index in array
+    if (array[i] === item) {
+      // array.splice(index of item only);
+      array.splice(array.indexOf(item), 1);
+      return item;
+    }
+  }
+  return null;
+}
+
+console.log(removeItem('coffee', basket));
+console.log(basket); // DONE
