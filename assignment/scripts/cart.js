@@ -69,6 +69,8 @@ empty();
 
 console.log('basket should be assigned to an empty array:', basket); // DONE
 
+empty();
+
 // ### Stretch Goals
 // Remember that Stretch Goals are not required, but will help you to further develop concepts from the skills we have covered.
 
@@ -128,19 +130,33 @@ console.log(basket); // DONE
 //   - Use [Array.splice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) to remove the first matching item from the basket.
 //   - Return the item removed or `null` if the item was not found
 
+// ORIGINAL removeItem() FUNCTION
+// function removeItem(item, array) {
+//   // remove matching item from basket
+//   // make a LOOP to interate through indices
+//   for (let i = 0; i < array.length; i++) {
+//     // find specific index in array
+//     if (array[i] === item) {
+//       // array.splice(index of item only);
+//       array.splice(array.indexOf(item), 1);
+//       return item;
+//     }
+//   }
+//   return null;
+// }
+
+// THIS IS MATT'S SUGGESTED UPDATE TO THE FUNCTION
 function removeItem(item, array) {
-  // remove matching item from basket
-  // make a LOOP to interate through indices
-  for (let i = 0; i < array.length; i++) {
-    // find specific index in array
-    if (array[i] === item) {
-      // array.splice(index of item only);
-      array.splice(array.indexOf(item), 1);
-      return item;
-    }
+  const index = array.indexOf(item);
+  if (index >= 0) {
+    array.splice(array.indexOf(item), 1);
+    return item;
   }
   return null;
 }
 
-console.log(removeItem('coffee', basket));
+console.log(
+  'this should remove coffee from the array:',
+  removeItem('coffee', basket)
+);
 console.log(basket); // DONE
